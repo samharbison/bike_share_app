@@ -3,7 +3,18 @@ library(shiny)
 library(tidyverse)
 library(leaflet)
 library(shinyjs)
+
 tagList(useShinyjs(),
+        tags$head(
+          tags$meta(charset="utf-8"),
+          #tags$meta(http-equiv="X-UA-Compatible", content="IE=edge"),
+          tags$meta(name="viewport", content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"),
+          tags$meta(name="mobile-web-app-capable", content="yes"),
+          tags$meta(name="apple-mobile-web-app-capable", content="yes"),
+          tags$meta(name="theme-color", content="#000000"),
+          tags$meta(name="description", content=""),
+          tags$meta(name="author", content="")
+        ),
         navbarPage("US Bike Shares",
                    id = "nav",
                    
